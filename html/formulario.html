@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMULÁRIO</title>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Clube de Física - JLA</h1>
+        </header>
+        <form>
+            <header>
+                <h2>Faça já a sua inscrição para poder participar do clube de física!</h2>
+                <p>Preencha todos os campos corretamente. Após o formulário ser enviado, analisaremos manualmente sua solicitação e daremos uma resposta via email em até 7 dias úteis.</p>
+            </header>
+            <section>
+                <label for="nome">Nome completo:</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Digite seu email" required>
+                <h4>Escolha sua turma:</h4>
+                <label for="turma">Matutino</label>
+                <select>
+                    <option value="1m1">1ºM1</option>
+                    <option value="1m2">1ºM2</option>
+                    <option value="1m3">1ºM3</option>
+                    <option value="1m4">1ºM4</option>
+                    <option value="2m1">2ºM1</option>
+                    <option value="2m2">2ºM2</option>
+                    <option value="2m3">2ºM3</option>
+                    <option value="2m4">2ºM4</option>
+                    <option value="3m1">3ºM1</option>
+                    <option value="3m2">3ºM2</option>
+                    <option value="3m3">3ºM3</option>
+                    <option value="3m4">3ºM4</option>
+                </select>
+                <label>Verspertino</label>
+                <select>
+                    <option value="1t1">1ºT1</option>
+                    <option value="1t2">1ºT2</option>
+                    <option value="1t3">1ºT3</option>
+                    <option value="1t4">1ºT4</option>
+                    <option value="2t1">2ºT1</option>
+                    <option value="2t2">2ºT2</option>
+                    <option value="2t3">2ºT3</option>
+                    <option value="2t4">2ºT4</option>
+                    <option value="3t1">3ºT1</option>
+                    <option value="3t2">3ºT2</option>
+                    <option value="3t3">3ºT3</option>
+                    <option value="3t4">3ºT4</option>
+                </select>
+            </section>
+            <footer>
+                <button type="submit">Enviar</button>
+            </footer>
+            <section>
+                <h4>Digite o código de acesso para poder enviar o formulário</h4>
+                <label for="codigo">Código de acesso:</label>
+                <input type="text" id="codigo" name="codigo" placeholder="Digite o código de acesso" required>
+            </section>
+        </form>
+        <footer></footer>
+    </main>
+    
+</body>
+</html>

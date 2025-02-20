@@ -6,6 +6,23 @@
     <title>Login</title>
 </head>
 <body>
-    
+    <main>
+        <header>
+            <h1>Clube de Física - JLA</h1>
+            <p>Faça login para poder comentar nas publicações feitas pelos integrantes do clube</p>
+        </header>
+        <form action="../php/login.php" method="POST" >
+            <section>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Digite seu email" required>
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+            </section>
+            <footer>
+                <p>Ainda não possui uma conta? Então <a href="cadastro.html">Cadastre-se</a> </p>
+                <button type="submit">Enviar</button>
+            </footer>
+        </form>
+    </main>
 </body>
 </html>
