@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/form.css">
     <title>FORMULÁRIO</title>
 </head>
 <body>
@@ -20,36 +21,38 @@
                 <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" placeholder="Digite seu email" required>
-                <h4>Escolha sua turma:</h4>
-                <label for="turma">Matutino</label>
-                <select>
-                    <option value="1m1">1ºM1</option>
-                    <option value="1m2">1ºM2</option>
-                    <option value="1m3">1ºM3</option>
-                    <option value="1m4">1ºM4</option>
-                    <option value="2m1">2ºM1</option>
-                    <option value="2m2">2ºM2</option>
-                    <option value="2m3">2ºM3</option>
-                    <option value="2m4">2ºM4</option>
-                    <option value="3m1">3ºM1</option>
-                    <option value="3m2">3ºM2</option>
-                    <option value="3m3">3ºM3</option>
-                    <option value="3m4">3ºM4</option>
+                <h4>Qual seu turno?</h4>
+                <label for="matutino">Matutino</label>
+                <input type="radio" id="matutino" value="matutino" onclick="turma_matutino_selecao()" name="turma">
+                <label for="vespertino">Vespertino</label>
+                <input type="radio" id="vespertino" name="turma" onclick="turma_vespertino_selecao()" value="vespertino">
+                <select id="turma_matutino">
+                    <option value="primeiro_M1">1ºM1</option>
+                    <option value="primeiro_M2">1ºM2</option>
+                    <option value="primeiro_M3">1ºM3</option>
+                    <option value="primeiro_M4">1ºM4</option>
+                    <option value="segundo_M1">2ºM1</option>
+                    <option value="segundo_M2">2ºM2</option>
+                    <option value="segundo_M3">2ºM3</option>
+                    <option value="segundo_M4">2ºM4</option>
+                    <option value="terceiro_M1">3ºM1</option>
+                    <option value="terceiro_M2">3ºM2</option>
+                    <option value="terceiro_M3">3ºM3</option>
+                    <option value="terceiro_M4">3ºM4</option>
                 </select>
-                <label>Verspertino</label>
-                <select>
-                    <option value="1t1">1ºT1</option>
-                    <option value="1t2">1ºT2</option>
-                    <option value="1t3">1ºT3</option>
-                    <option value="1t4">1ºT4</option>
-                    <option value="2t1">2ºT1</option>
-                    <option value="2t2">2ºT2</option>
-                    <option value="2t3">2ºT3</option>
-                    <option value="2t4">2ºT4</option>
-                    <option value="3t1">3ºT1</option>
-                    <option value="3t2">3ºT2</option>
-                    <option value="3t3">3ºT3</option>
-                    <option value="3t4">3ºT4</option>
+                <select id="turma_vespertino">
+                    <option value="primeiro_T1">1ºT1</option>
+                    <option value="primeiro_T2">1ºT2</option>
+                    <option value="primeiro_T3">1ºT3</option>
+                    <option value="primeiro_T4">1ºT4</option>
+                    <option value="segundo_T1">2ºT1</option>
+                    <option value="segundo_T2">2ºT2</option>
+                    <option value="segundo_T3">2ºT3</option>
+                    <option value="segundo_T4">2ºT4</option>
+                    <option value="terceiro_T1">3ºT1</option>
+                    <option value="terceiro_T2">3ºT2</option>
+                    <option value="terceiro_T3">3ºT3</option>
+                    <option value="terceiro_T4">3ºT4</option>
                 </select>
             </section>
             <footer>
@@ -63,6 +66,6 @@
         </form>
         <footer></footer>
     </main>
-    
+    <script src="../js/form.js"></script>
 </body>
 </html>
