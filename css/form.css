@@ -5,7 +5,6 @@
     --vermelho: #d32f2f ;
     --preto: #212121 ;
     --azul: #1976d2;
-}
-html{
-    background-color: var(--azul);
+    --principal: "Playfair Display", serif;
+    --secundaria : "Lato", serif;
 }
