@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Publicações</title>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Crie publicações</h1>
+        </header>
+        <form action="../php/post.php" method="POST" >
+            <section>
+                <label for="conteudo" >Conteúdo</label>
+                <textarea id="conteudo" name="conteudo" placeholder="Digite aqui o conteúdo do post" rows="5" required></textarea>
+                <label for="imagem">Publique uma imagem (opcional)</label>
+                <input type="file" multiple>
+            </section>
+            <footer>
+                <button type="submit">Enviar</button>
+            </footer>
+        </form>
+    </main>
+</body>
+</html>

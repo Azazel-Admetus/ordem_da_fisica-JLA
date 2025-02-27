@@ -1,7 +1,7 @@
 <?php
 require_once "conn.php";
 
-$stmt=$conn->prepare('CREATE TABLE recrutamento (id INT AUTO_INCREMENT PRIMARY KEY, nome VARCHAR(255) NOT NULL, email VARCHAR(255) NOT NULL UNIQUE, turma VARCHAR(10) NOT NULL)');
+$stmt=$conn->prepare('CREATE TABLE POST (id INT AUTO_INCREMENT PRIMARY KEY, titulo VARCHAR(255), conteudo TEXT, imagem LONGBLOB, tipo_mime VARCHAR(50))');
 if ($stmt->execute()){
     echo "tabela criada com sucesso";
     exit;
