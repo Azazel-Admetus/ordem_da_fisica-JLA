@@ -55,10 +55,10 @@ form footer{
     align-items: center;
     gap: 20px;
 }
-form section label{
+form section #nome_usuario{
     font-family: var(--secundaria);
     font-weight: 700;
-    margin-right: 200px;
+    margin-right: 215px;
     margin-bottom:5px;
 }
 
@@ -98,5 +98,17 @@ button{
     display: inline-block;
 }
 button:hover{
-    border:solid 2px var(--preto)
+    background-color: #b6b6b6;
+}
+#email-label {
+    font-family: var(--secundaria);
+    font-weight: 700;
+    margin-right: 300px;
+    margin-bottom:5px;
+}
+#senha-label{
+    font-family: var(--secundaria);
+    font-weight: 700;
+    margin-right: 300px;
+    margin-bottom:5px;
 }

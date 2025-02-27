@@ -103,5 +103,5 @@ button{
     display: inline-block;
 }
 button:hover{
-    border:solid 2px var(--preto)
+    background-color: #b6b6b6;
 }
