@@ -10,12 +10,16 @@
         <header>
             <h1>Crie publicações</h1>
         </header>
-        <form action="../php/post.php" method="POST" >
+        <form action="../php/post.php" method="POST" enctype="multipart/form-data" >
             <section>
+                <label for="titulo">Título (opcional)</label>
+                <input type="text" id="titulo" name="titulo" placeholder="Defina um titulo">
+
                 <label for="conteudo" >Conteúdo</label>
                 <textarea id="conteudo" name="conteudo" placeholder="Digite aqui o conteúdo do post" rows="5" required></textarea>
+
                 <label for="imagem">Publique uma imagem (opcional)</label>
-                <input type="file" multiple>
+                <input type="file" id="imagem" name="imagem">
             </section>
             <footer>
                 <button type="submit">Enviar</button>
