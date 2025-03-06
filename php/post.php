@@ -19,11 +19,11 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && $_SESSION['user_tipo'] == 'admin' ){
     }
     if(!empty($conteudo)){
         $stmt = $conn->prepare("INSERT INTO POST (titulo, conteudo, imagem, tipo_mime, admin_id) VALUES(:titulo, :conteudo, :imagem, :tipo_mime, :admin_id)");
-        $stmt->bindParam(':titulo', $titulo_dado);
-        $stmt->bindParam(':conteudo', $conteudo);
-        $stmt->bindParam(':imagem', $imagem_dados);
-        $stmt->bindParam(':tipo_mime', $tipo_mime);
-        $stmt->bindParam(':admin_id', $admin_id);
+        $stmt->bindValue(':titulo', $titulo_dado);
+        $stmt->bindValue(':conteudo', $conteudo);
+        $stmt->bindValue(':imagem', $imagem_dados);
+        $stmt->bindValue(':tipo_mime', $tipo_mime);
+        $stmt->bindValue(':admin_id', $admin_id);
         if($stmt->execute()){
             header('Location:../html/index.html?feed=True');
             exit;
