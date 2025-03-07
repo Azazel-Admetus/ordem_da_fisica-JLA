@@ -20,7 +20,8 @@ if(!$posts){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/index-php.css">
+    <script src="https://kit.fontawesome.com/166d077dc6.js" crossorigin="anonymous"></script>
     <title>Clube de Física - JLA</title>
 </head>
 <body>
@@ -30,10 +31,12 @@ if(!$posts){
             <nav>
                 <ul>
                     <li>
-                        <a href="../html/login.html">Login</a>
+                        <a href="../html/formulario.html">Inscrição</a>
                     </li>
                     <li>
-                        <a href="../html/cadastro.html">Cadastre-se</a>
+                        <a href="../html/index.html">
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                        </a>
                     </li>
                 </ul>
             </nav>
