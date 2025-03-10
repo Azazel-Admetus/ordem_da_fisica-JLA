@@ -1,48 +1,61 @@
-:root{
-    --vermelho: #ff3131 ;
-    --preto: #212121 ;
-    --azul: #1976d2;
-    --principal: "Playfair Display", serif;
-    --secundaria : "Lato", serif;
+
+/* estilizando o corpo do site */
+.feed-pai{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    width: 100%;
+    margin-top: 20px;
 }
-html{
-    margin: 0;
-    box-sizing: border-box;
-    padding: 0;
+.feed{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: solid 1px black;
+    padding: 20px;
+    max-width: 1000px;
+    max-height: 1000px;
+    width: 100%;   
+    margin: 5%;
+    overflow: hidden;
 }
-header h1{
+.feed img{
+    max-width: 500px;
+    max-height: 500px;
+    width: auto;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
+    margin-bottom: 5%;
+}
+.feed-pai section h3{
+    margin-top: -15px;
     font-family: var(--principal);
-    font-style: normal;
-    font-weight: 800;
-    text-decoration: underline;
-    color: var(--vermelho);
-}
-header nav ul li a{
-    font-family: var(--secundaria);
-    font-weight: 600;
-    text-decoration: none;
     color: var(--preto);
-    font-size: 18px;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
 }
-header nav ul li{
-    list-style-type: none;
-}
-header nav ul li a:hover{
-    text-decoration: underline;
-}
-header{
+.feed-pai p{
+    font-family: var(--secundaria);
+    font-size: 20px;
+    color: var(--preto);
     display: flex;
     justify-content: space-between;
-    margin-left: 5%;
-    margin-right: 5%;
-    padding: 10px 100px;
     align-items: center;
-    border-bottom:1px solid var(--preto);
-
+    margin: 0;
+    margin-bottom: 5%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    text-align: left;
 }
-nav ul{
-    display: flex;
-    align-items: row;
-    gap: 300px;
-    
+.feed-pai small{
+    font-family: var(--principal);
+    color: var(--preto);
+    font-size: 15px;
+    margin-right: -80%;
 }

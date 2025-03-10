@@ -25,7 +25,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && $_SESSION['user_tipo'] == 'admin' ){
         $stmt->bindValue(':tipo_mime', $tipo_mime);
         $stmt->bindValue(':admin_id', $admin_id);
         if($stmt->execute()){
-            header('Location:../html/index.html?feed=True');
+            header('Location:../php/index-pos.php?feed=True');
             exit;
         }else{
             header('Location:../html/index.html?feed=False');

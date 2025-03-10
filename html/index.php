@@ -22,10 +22,9 @@
             </nav>
         </header>
         <section>
-            <a href="feed_create.html">crie publicações</a>
-        </section>
-        <section>
-            
+            <?php
+                require_once "../php/index-feed.php";
+            ?>
         </section>
         <footer></footer>
     </main>

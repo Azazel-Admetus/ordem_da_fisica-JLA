@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
         $stmt->bindParam(':senha', $senha);
         $stmt->bindParam(':tipo', $tipo);
         if ($stmt->execute()){
-            header('Location:../html/cadastro.html?db=True');
+            header('Location:index-pos.php');
             exit;
         }else{
             header('Location:../html/cadastro.html?db=False');

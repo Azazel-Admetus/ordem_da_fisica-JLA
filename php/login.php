@@ -14,7 +14,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
             $_SESSION['user_id'] = $user['id'];
             $_SESSION['username'] = $user['nome'];
             $_SESSION['user_tipo'] = $user['tipo'];
-            header('Location:../php/index.php');
+            header('Location:index-pos.php');
             exit;
         }else{
             header('Location:../html/login.html?error=invalid_credentials');

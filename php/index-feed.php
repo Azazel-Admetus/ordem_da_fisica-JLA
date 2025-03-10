@@ -22,27 +22,14 @@ if(!$posts){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/index-php.css">
     <script src="https://kit.fontawesome.com/166d077dc6.js" crossorigin="anonymous"></script>
-    <title>Clube de Física - JLA</title>
+    <title>Ordem da Física</title>
 </head>
 <body>
     <main>
-        <header>
-            <h1>Ordem da Física</h1>
-            <nav>
-                <ul>
-                    <li>
-                        <a href="../html/formulario.html">Inscrição</a>
-                    </li>
-                    <li>
-                        <a href="../html/index.html">
-                            <i class="fa-solid fa-right-from-bracket"></i>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
         <section>
-            <a href="../html/feed_create.html">crie publicações</a>
+            <?php if(isset($_SESSION['user_tipo']) && $_SESSION['user_tipo'] == 'admin'): ?>
+                <a href="../html/feed_create.html">Criar Publicações</a>
+            <?php endif; ?>
         </section>
         <?php foreach ($posts as $post): ?>
             <?php
@@ -54,18 +41,20 @@ if(!$posts){
                 $criado_data = date('d/m/Y', strtotime($post['criado_data']));
                 $criado_hora = date('H:i', strtotime($post['criado_data']));
                 ?>
-                <section>
-                    <?php if(!empty($post['titulo'])): ?>
-                        <h3><?php echo $titulo; ?></h3>
-                    <?php endif; ?>
-                    <p><?= $conteudo; ?></p>
-                    <?php if(!empty($imagem)): ?>
-                        <img
-                            src="data:<?php echo $tipo_mime; ?>;base64,<?php echo base64_encode($imagem);?>"
-                            alt="Imagem da publicação feita pelo admin ao blog"
-                        >
-                    <?php endif; ?>
-                    <small>Publicado em: <?php echo $criado_data; ?> às <?php echo $criado_hora;?></small>
+                <section class="feed-pai">
+                    <section class="feed" >
+                        <?php if(!empty($post['titulo'])): ?>
+                            <h3 class="titulo" ><?php echo $titulo; ?></h3>
+                        <?php endif; ?>
+                        <p class="conteudo" ><?= $conteudo; ?></p>
+                        <?php if(!empty($imagem)): ?>
+                            <img class="imagem"
+                                src="data:<?php echo $tipo_mime; ?>;base64,<?php echo base64_encode($imagem);?>"
+                                alt="Imagem da publicação feita pelo admin ao blog"
+                            >   
+                        <?php endif; ?>
+                        <small>Publicado em: <?php echo $criado_data; ?> às <?php echo $criado_hora;?></small>
+                    </section>
                 </section>
          <?php endforeach; ?>
         <footer></footer>
