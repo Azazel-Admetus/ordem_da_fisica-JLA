@@ -13,7 +13,7 @@
         <nav>
             <ul>
                 <li>
-                    <a href="../html/formulario.html">Inscrição</a>
+                    <a href="../html/formulario.php">Inscrição</a>
                 </li>
                 <li>
                     <a href="../html/index.php">
@@ -29,7 +29,7 @@
             $user_tipo = $_SESSION['user_tipo'];
             if($user_tipo == 'admin'){
                 echo "
-                    <a href='../html/feed_create.html'>Crie uma publicação</a>
+                    <a href='../html/feed_create.php'>Crie uma publicação</a>
                 ";
             }
         ?>

@@ -18,10 +18,13 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
                     $stmt->bindParam(':turno', $turno);
                     $stmt->bindParam(':turma', $turma);
                     if($stmt->execute()){
-                        header('Location:../html/formulario.html?answer=True');
+                        header('Location:../html/formulario.php?answer=True');
                         exit;
                     }
                 }
+            }else{
+                header('Location:../html/formulario.php?error=invalid_cod');
+                exit;
             }
 
         }

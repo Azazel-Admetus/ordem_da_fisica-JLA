@@ -2,9 +2,141 @@
     display: none;
 }
 :root{
-    --vermelho: #d32f2f ;
+    --vermelho: #ff3131 ;
     --preto: #212121 ;
     --azul: #1976d2;
     --principal: "Playfair Display", serif;
-    --secundaria : "Lato", serif;
+    --secundaria : "Lato", sans-serif;
+}
+html{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+#main_header h1{
+    font-family: var(--principal);
+    font-style: normal;
+    font-weight: 800;
+    text-decoration: underline;
+    color: var(--vermelho);
+}
+#main_header a{
+    font-family: var(--secundaria);
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--preto);
+    font-size: 18px;
+}
+
+#main_header a:hover{
+    text-decoration: underline;
+}
+#main_header{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 10px 100px;
+    align-items: center;
+    border-bottom:1px solid var(--preto);
+
+}
+nav ul{
+    display: flex;
+    align-items: row;
+    gap: 300px;
+    
+}
+/* estilizando o form */
+form{
+    border: solid 1px var(--preto);
+    padding: 50px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+form header{
+    margin-top:-50px;
+    text-align: center;
+}
+form header h2{
+    font-family: var(--secundaria);
+    font-weight: 700;
+    color: var(--preto);
+
+}
+form header p{
+    font-family: var(--secundaria);
+    font-weight: 300;
+    color: var(--vermelho);
+    text-decoration: underline;
+    margin-bottom: 30px;
+}
+form section{
+    display: flex;
+    flex-direction: row;
+}
+form section #section-separação{
+    display: flex;
+    flex-direction: column;
+}
+form section #nome-email{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+form section #nome-email #nome{
+    margin-right: 20px;
+}
+form section #nome-email label{
+    margin-right: 10px;
+    font-family: var(--secundaria);
+    color: var(--preto);
+    font-weight: 700;
+}
+form section #nome-email label:hover{
+    text-decoration: underline;
+}
+form section #nome-email input{
+    border-radius: 20px;
+    border: solid 1px var(--vermelho);
+    padding: 10px 15px;
+}
+form section #nome-email input::placeholder{
+    text-align: center;
+}
+form section  #nome-email input:focus{
+    background-color: #e8f7ff;
+    border-color: #0d47a1;
+}
+form section #nome-email input:focus::placeholder{
+    color: var(--azul);
+    text-decoration: underline;
+}
+form section #turno-tag{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+form section #turno-tag h4{
+    font-family: var(--secundaria);
+    font-weight: 700;
+    margin-right: 20px;
+}
+form section #turno-tag #matutino{
+    margin-right: 5px;
+}
+form section #turno-tag #vespertino{
+    margin-right: 5px;
+}
+form #cod{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+form #cod h4{
+    font-family: var(--secundaria);
+    font-weight: 700;
+    color: var(--preto);
+    
 }
