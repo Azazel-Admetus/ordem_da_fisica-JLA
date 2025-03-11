@@ -2,9 +2,7 @@
 require_once "conn.php";
 session_start();//inicia a sessão
 //pegando o conteúdo do db
-$stmt = $conn->prepare("SELECT titulo, conteudo, imagem, tipo_mime, admin_id, criado_data from post where admin_id = :id_user");
-$id_user = $_SESSION['user_id'];
-$stmt->bindValue(':id_user', $id_user);
+$stmt = $conn->prepare("SELECT titulo, conteudo, imagem, tipo_mime, admin_id, criado_data FROM post");
 $stmt->execute();
 $posts = $stmt->fetchAll(PDO::FETCH_ASSOC);
 //verificando se há resultados
@@ -27,9 +25,7 @@ if(!$posts){
 <body>
     <main>
         <section>
-            <?php if(isset($_SESSION['user_tipo']) && $_SESSION['user_tipo'] == 'admin'): ?>
-                <a href="../html/feed_create.html">Criar Publicações</a>
-            <?php endif; ?>
+        
         </section>
         <?php foreach ($posts as $post): ?>
             <?php

@@ -26,6 +26,12 @@
     <section>
         <?php
             require_once "index-feed.php";
+            $user_tipo = $_SESSION['user_tipo'];
+            if($user_tipo == 'admin'){
+                echo "
+                    <a href='../html/feed_create.html'>Crie uma publicação</a>
+                ";
+            }
         ?>
     </section>
 </body>
