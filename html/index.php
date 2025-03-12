@@ -21,9 +21,9 @@
                 </ul>
             </nav>
         </header>
-        <section>
+        <section id='formulario'>
             <h2>Tem interesse em entrar para o clube de física? Faça já a sua inscrição por meio do link abaixo!</h2>
-            <a href="formulario.php">Se Inscreva</a>
+            <a href="formulario.php?">Se Inscreva</a>
             <p>Vale ressaltar que as incrições somente são válidas se você for um aluno da escola Joaquim de Lima Avelino da cidade de Ouro Preto do Oeste, Rondônia</p>
         </section>
         <section>

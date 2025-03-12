@@ -1,4 +1,10 @@
-
+:root{
+    --vermelho: #ff3131 ;
+    --preto: #212121 ;
+    --azul: #1976d2;
+    --principal: "Playfair Display", serif;
+    --secundaria : "Lato", sans-serif;
+}
 /* estilizando o corpo do site */
 .feed-pai{
     display: flex;
