@@ -13,10 +13,10 @@
             <nav>
                 <ul>
                     <li>
-                        <a href="login.html">Login</a>
+                        <a id='login' href="login.html">Login</a>
                     </li>
                     <li>
-                        <a href="cadastro.html">Cadastre-se</a>
+                        <a id='cadastro' href="cadastro.html">Cadastre-se</a>
                     </li>
                 </ul>
             </nav>
