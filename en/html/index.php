@@ -1,7 +1,7 @@
 <?php
 if(isset($_GET['idioma'])){
     $idioma = $_GET['idioma'];
-    header("Location:../$idioma/html/index.php");
+    header("Location:../../$idioma/html/index.php");
     exit;
 }
 ?>
@@ -57,6 +57,5 @@ if(isset($_GET['idioma'])){
             }
         });
     </script>
-    </main>
 </body>
 </html>
