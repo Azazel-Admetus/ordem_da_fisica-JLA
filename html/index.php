@@ -48,6 +48,9 @@ if(isset($_GET['idioma'])){
                     <option value="jp">Japonês</option>
                 </select>
             </form>
+            <section>
+                <img id='jla' src="../img/LOGO MENOR JLA PNG.png">
+            </section>
         </footer>
     </main>
     <script>

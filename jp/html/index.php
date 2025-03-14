@@ -1,8 +1,14 @@
 <?php
 if(isset($_GET['idioma'])){
     $idioma = $_GET['idioma'];
-    header("Location:../../$idioma/html/index.php");
-    exit;
+    if($idioma == 'pt'){
+        header('Location:../../html/index.php');
+        exit;
+
+    }else{
+        header("Location:../../$idioma/html/index.php");
+        exit;
+    }
 }
 ?>
 <!DOCTYPE html>
@@ -43,11 +49,14 @@ if(isset($_GET['idioma'])){
                 <label>Mude o idioma</label>
                 <select name="idioma" id="mudar-idioma" onchange="this.form.submit()">
                     <option value="">Escolha um idioma</option>
+                    <option value="pt">Português</option>
                     <option value="en">Inglês</option>
                     <option value="es">Espanhol</option>
-                    <option value="jp">Japonês</option>
                 </select>
             </form>
+            <section>
+                <img id='jla' src="../img/LOGO MENOR JLA PNG.png">
+            </section>
         </footer>
     </main>
     <script>

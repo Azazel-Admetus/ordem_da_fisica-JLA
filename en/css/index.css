@@ -129,3 +129,20 @@ main #formulario p{
         margin-left: -10%;
     }
 }
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+footer label{
+    font-family: var(--secundaria);
+    color: var(--preto);
+    font-size: 15px;
+    font-weight: 600;
+}
+#jla{
+    max-width: 100px;
+    max-height: 100px;
+}
