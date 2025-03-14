@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página onde os usuários fazem login para poder acessar o site.">
+    <meta name="keywords" content="física, clube, clube escolar, aprenda física, imerse na física, JLA, Joaquim de Lima, Joaquim de Lima Avelino, ensino, ciência, ordem da física, estudos, clube de estudos, apreder física, login, acessar site">
+    <meta name="author" content="Azazel Admetus">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" href="../img/img-logo.jpeg" type="image/jpeg">
     <link rel="stylesheet" href="../css/login.css">
     <title>Login</title>
 </head>
