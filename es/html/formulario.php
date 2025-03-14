@@ -1,18 +1,18 @@
 <?php
 $error_msg = '';
 if(isset($_GET['error']) &&  $_GET['error'] == 'invalid_cod'){
-    $error_msg = "Código inválido. Verifique se digitou corretamente ou entre em contato com os membros do clube.";
+    $error_msg = "Código inválido. Verifique si lo escribió correctamente o póngase en contacto con los miembros del club.";
 }
 ?>
 
 
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/form.css">
-    <title>FORMULÁRIO</title>
+    <title>FORMULARIO</title>
 </head>
 <body>
     <main>
@@ -20,27 +20,27 @@ if(isset($_GET['error']) &&  $_GET['error'] == 'invalid_cod'){
             <p style="color: red; font-weight:bold;"><?php echo htmlspecialchars($error_msg);?></p>
         <?php endif;?>
         <header id='main_header'>
-            <h1>Ordem da Física</h1>
+            <h1>Orden de la Física</h1>
         </header>
         <div>
             <form  action="../php/formulario_php.php" method="POST" >
                 <header>
-                    <h2>Faça já a sua inscrição para poder participar do Clube de Física!</h2>
-                    <p>Preencha todos os campos corretamente. Após o formulário ser enviado, analisaremos manualmente sua solicitação e daremos uma resposta via email em até 7 dias úteis.</p>
+                    <h2>¡Regístrate ahora para unirte al Club de Física!</h2>
+                    <p>Rellena todos los campos correctamente. Después de que se envíe el formulario, revisaremos manualmente tu solicitud y te responderemos por correo electrónico en un plazo de 7 días hábiles.</p>
                 </header>
                 <section>
                     <section id='section-separacao'>
                         <div id='nome-email'>
-                            <label for="nome">Nome completo:</label>
-                            <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
-                            <label for="email">Email:</label>
-                            <input type="email" id="email" name="email" placeholder="Digite seu email" required>
+                            <label for="nome">Nombre completo:</label>
+                            <input type="text" id="nome" name="nome" placeholder="Ingresa tu nombre completo" required>
+                            <label for="email">Correo electrónico:</label>
+                            <input type="email" id="email" name="email" placeholder="Ingresa tu correo electrónico" required>
                         </div>
                         <div id='turno-tag'>
-                            <h4>Qual seu turno?</h4>
-                            <label for="matutino">Matutino</label>
+                            <h4>¿En qué turno estás?</h4>
+                            <label for="matutino">Mañana</label>
                             <input type="radio" id="matutino" value="matutino" onclick="turma_matutino_selecao()" name="turno">
-                            <label for="vespertino">Vespertino</label>
+                            <label for="vespertino">Tarde</label>
                             <input type="radio" id="vespertino" name="turno" onclick="turma_vespertino_selecao()" value="vespertino">
                             <select name="turma" id="turma_matutino">
                                 <option value="primeiro_M1">1ºM1</option>
@@ -74,9 +74,9 @@ if(isset($_GET['error']) &&  $_GET['error'] == 'invalid_cod'){
                     <section>
                         <section id='cod'>
                     <!-- codigo de acesso: Uqmx8vpl -->
-                            <h4>Digite o código de acesso para poder enviar o formulário</h4>
-                            <label for="codigo">Código de acesso:</label>
-                            <input type="text" id="codigo" name="codigo" placeholder="Digite o código de acesso" required>
+                            <h4>Ingresa el código de acceso para enviar el formulario</h4>
+                            <label for="codigo">Código de acceso:</label>
+                            <input type="text" id="codigo" name="codigo" placeholder="Ingresa el código de acceso" required>
                         </section>
                     </section>
                 </section>

@@ -12,32 +12,32 @@ if(isset($_GET['idioma'])){
 }
 ?>
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/index.css">
-    <title>Clube de Física - JLA</title>
+    <title>Club de Física - JLA</title>
 </head>
 <body>
     <main>
         <header>
-            <h1>Ordem da Física</h1>
+            <h1>Orden de la Física</h1>
             <nav>
                 <ul>
                     <li>
-                        <a id='login' href="login.html">Login</a>
+                        <a id='login' href="login.php">Iniciar sesión</a>
                     </li>
                     <li>
-                        <a id='cadastro' href="cadastro.html">Cadastre-se</a>
+                        <a id='cadastro' href="cadastro.php">Regístrate</a>
                     </li>
                 </ul>
             </nav>
         </header>
         <section id='formulario'>
-            <h2>Tem interesse em entrar para o clube de física? Faça já a sua inscrição por meio do link abaixo!</h2>
-            <a href="formulario.php?">Se Inscreva</a>
-            <p>Vale ressaltar que as incrições somente são válidas se você for um aluno da escola Joaquim de Lima Avelino da cidade de Ouro Preto do Oeste, Rondônia</p>
+            <h2>¿Estás interesado en unirte al club de física? ¡Haz tu inscripción a través del siguiente enlace!</h2>
+            <a href="formulario.php?">Inscríbete</a>
+            <p>Es importante señalar que las inscripciones solo son válidas si eres estudiante de la escuela Joaquim de Lima Avelino en la ciudad de Ouro Preto do Oeste, Rondônia</p>
         </section>
         <section>
             <?php
@@ -46,12 +46,12 @@ if(isset($_GET['idioma'])){
         </section>
         <footer>
             <form method="GET">
-                <label>Mude o idioma</label>
+                <label>Cambiar idioma</label>
                 <select name="idioma" id="mudar-idioma" onchange="this.form.submit()">
-                    <option value="">Escolha um idioma</option>
-                    <option value="pt">Português</option>
-                    <option value="en">Inglês</option>
-                    <option value="jp">Japonês</option>
+                    <option value="">Selecciona un idioma</option>
+                    <option value="pt">Portugués</option>
+                    <option value="en">Inglés</option>
+                    <option value="jp">Japonés</option>
                 </select>
             </form>
             <section>

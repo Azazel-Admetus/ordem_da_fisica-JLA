@@ -20,10 +20,10 @@ if(isset($_GET['idioma'])){
             <nav>
                 <ul>
                     <li>
-                        <a id='login' href="login.html">Login</a>
+                        <a id='login' href="login.php">Login</a>
                     </li>
                     <li>
-                        <a id='cadastro' href="cadastro.html">Cadastre-se</a>
+                        <a id='cadastro' href="cadastro.php">Cadastre-se</a>
                     </li>
                 </ul>
             </nav>

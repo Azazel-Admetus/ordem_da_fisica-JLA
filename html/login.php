@@ -20,7 +20,7 @@
                 <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
             </section>
             <footer>
-                <p>Ainda não possui uma conta? Então <a href="cadastro.html">Cadastre-se</a> </p>
+                <p>Ainda não possui uma conta? Então <a href="cadastro.php">Cadastre-se</a> </p>
                 <!-- <a href="#">Esqueceu sua senha?</a> -->
                 <button type="submit">Enviar</button>
             </footer>

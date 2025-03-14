@@ -22,7 +22,7 @@
                 <input type="password" id="senha" name="senha" placeholder="Crie uma senha" required>
             </section>
             <footer>
-                <p>Já possui uma conta? Faça <a href="login.html">Login</a></p>
+                <p>Já possui uma conta? Faça <a href="login.php">Login</a></p>
                 <button type="submit">Enviar</button>
             </footer>
         </form>

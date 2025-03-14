@@ -12,32 +12,32 @@ if(isset($_GET['idioma'])){
 }
 ?>
 <!DOCTYPE html>
-<html lang="jp">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/index.css">
-    <title>Clube de Física - JLA</title>
+    <title>物理部 - JLA</title>
 </head>
 <body>
     <main>
         <header>
-            <h1>Ordem da Física</h1>
+            <h1>物理オーダー</h1>
             <nav>
                 <ul>
                     <li>
-                        <a id='login' href="login.html">Login</a>
+                        <a id='login' href="login.php">ログイン</a>
                     </li>
                     <li>
-                        <a id='cadastro' href="cadastro.html">Cadastre-se</a>
+                        <a id='cadastro' href="cadastro.php">登録</a>
                     </li>
                 </ul>
             </nav>
         </header>
         <section id='formulario'>
-            <h2>Tem interesse em entrar para o clube de física? Faça já a sua inscrição por meio do link abaixo!</h2>
-            <a href="formulario.php?">Se Inscreva</a>
-            <p>Vale ressaltar que as incrições somente são válidas se você for um aluno da escola Joaquim de Lima Avelino da cidade de Ouro Preto do Oeste, Rondônia</p>
+            <h2>物理部に参加したいですか？下のリンクから登録してください</h2>
+            <a href="formulario.php?">登録する</a>
+            <p>登録は、Rondônia州Ouro Preto do Oeste市のJoaquim de Lima Avelinoo学校の生徒に限られていますので、ご了承ください。</p>
         </section>
         <section>
             <?php
@@ -46,12 +46,12 @@ if(isset($_GET['idioma'])){
         </section>
         <footer>
             <form method="GET">
-                <label>Mude o idioma</label>
+                <label>言語を変更</label>
                 <select name="idioma" id="mudar-idioma" onchange="this.form.submit()">
-                    <option value="">Escolha um idioma</option>
-                    <option value="pt">Português</option>
-                    <option value="en">Inglês</option>
-                    <option value="es">Espanhol</option>
+                    <option value="">言語を選んでください</option>
+                    <option value="pt">ポルトガル語</option>
+                    <option value="en">英語</option>
+                    <option value="es">スペイン語</option>
                 </select>
             </form>
             <section>

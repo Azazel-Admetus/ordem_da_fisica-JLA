@@ -1,18 +1,18 @@
 <?php
 $error_msg = '';
 if(isset($_GET['error']) &&  $_GET['error'] == 'invalid_cod'){
-    $error_msg = "Código inválido. Verifique se digitou corretamente ou entre em contato com os membros do clube.";
+    $error_msg = "Invalid code. Please check if you typed it correctly or contact the club members.";
 }
 ?>
 
 
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/form.css">
-    <title>FORMULÁRIO</title>
+    <title>FORM</title>
 </head>
 <body>
     <main>
@@ -20,27 +20,27 @@ if(isset($_GET['error']) &&  $_GET['error'] == 'invalid_cod'){
             <p style="color: red; font-weight:bold;"><?php echo htmlspecialchars($error_msg);?></p>
         <?php endif;?>
         <header id='main_header'>
-            <h1>Ordem da Física</h1>
+            <h1>The Physics Order</h1>
         </header>
         <div>
             <form  action="../php/formulario_php.php" method="POST" >
                 <header>
-                    <h2>Faça já a sua inscrição para poder participar do Clube de Física!</h2>
-                    <p>Preencha todos os campos corretamente. Após o formulário ser enviado, analisaremos manualmente sua solicitação e daremos uma resposta via email em até 7 dias úteis.</p>
+                    <h2>Sign up now to join the Physics Club!</h2>
+                    <p>Fill in all fields correctly. After the form is submitted, we will manually review your request and reply via email within 7 business days.</p>
                 </header>
                 <section>
                     <section id='section-separacao'>
                         <div id='nome-email'>
-                            <label for="nome">Nome completo:</label>
-                            <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+                            <label for="nome">Full name:</label>
+                            <input type="text" id="nome" name="nome" placeholder="Enter your full name" required>
                             <label for="email">Email:</label>
-                            <input type="email" id="email" name="email" placeholder="Digite seu email" required>
+                            <input type="email" id="email" name="email" placeholder="Enter your email" required>
                         </div>
                         <div id='turno-tag'>
-                            <h4>Qual seu turno?</h4>
-                            <label for="matutino">Matutino</label>
+                            <h4>Which shift are you in?</h4>
+                            <label for="matutino">Morning</label>
                             <input type="radio" id="matutino" value="matutino" onclick="turma_matutino_selecao()" name="turno">
-                            <label for="vespertino">Vespertino</label>
+                            <label for="vespertino">Afternoon</label>
                             <input type="radio" id="vespertino" name="turno" onclick="turma_vespertino_selecao()" value="vespertino">
                             <select name="turma" id="turma_matutino">
                                 <option value="primeiro_M1">1ºM1</option>
@@ -74,14 +74,14 @@ if(isset($_GET['error']) &&  $_GET['error'] == 'invalid_cod'){
                     <section>
                         <section id='cod'>
                     <!-- codigo de acesso: Uqmx8vpl -->
-                            <h4>Digite o código de acesso para poder enviar o formulário</h4>
-                            <label for="codigo">Código de acesso:</label>
-                            <input type="text" id="codigo" name="codigo" placeholder="Digite o código de acesso" required>
+                            <h4>Enter the access code to submit the form</h4>
+                            <label for="codigo">Access Code:</label>
+                            <input type="text" id="codigo" name="codigo" placeholder="Enter the access code" required>
                         </section>
                     </section>
                 </section>
                 <footer>
-                    <button type="submit">Enviar</button>
+                    <button type="submit">Submit</button>
                 </footer>
             </form>
         </div>

@@ -1,19 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página donde se muestran las publicaciones realizadas por los administradores">
+    <meta name="keywords" content="física, club, club escolar, aprende física, sumérgete en la física, JLA, Joaquim de Lima, Joaquim de Lima Avelino, educación, ciencia, orden de la física, estudios, club de estudios, aprender física">
+    <meta name="author" content="Azazel Admetus">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" href="../img/img-logo.jpeg" type="image/jpeg">
     <link rel="stylesheet" href="../css/index-sec.css">
     <script src="https://kit.fontawesome.com/166d077dc6.js" crossorigin="anonymous"></script>
-    <title>Ordem da Física</title>
+    <title>Club de Física - JLA</title>
 </head>
 <body>
     <header>
-        <h1>Ordem da Física</h1>
+        <h1>Orden de la Física</h1>
         <nav>
             <ul>
                 <li>
-                    <a id='incricao' href="../html/formulario.php">Inscrição</a>
+                    <a id='incricao' href="../html/formulario.php">Inscríbete</a>
                 </li>
                 <li>
                     <a href="../html/index.php">

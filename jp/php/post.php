@@ -28,11 +28,11 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_SESSION['user_id']) && $_SESS
             header('Location:../php/index-pos.php?feed=True');
             exit;
         }else{
-            header('Location:../html/index.html?feed=False');
+            header('Location:../html/index.php?feed=False');
             exit;
         }
     }else{
-        header('Location:../html/index.html?error=conteudo+nao+encontrado');
+        header('Location:../html/index.php?error=conteudo+nao+encontrado');
         exit;
     }
 
