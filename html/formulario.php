@@ -11,6 +11,11 @@ if(isset($_GET['error']) &&  $_GET['error'] == 'invalid_cod'){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formulário de inscrição para poder participar do clube de física. Esse formulário necessita de um código para poder ser enviado">
+    <meta name="keywords" content="física, clube, clube escolar, aprenda física, imerse na física, JLA, Joaquim de Lima, Joaquim de Lima Avelino, ensino, ciência, ordem da física, estudos, clube de estudos, apreder física">
+    <meta name="author" content="Azazel Admetus">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" href="../img/img-logo.jpeg" type="image/jpeg">
     <link rel="stylesheet" href="../css/form.css">
     <title>FORMULÁRIO</title>
 </head>
