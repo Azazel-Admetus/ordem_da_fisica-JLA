@@ -7,10 +7,10 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
         $dado =trim( fgets($handle));
             fclose($handle);
             if($codigo_de_acesso == $dado){
-                $nome = $_POST['nome'];
-                $email = $_POST['email'];
-                $turno = $_POST['turno'];
-                $turma = $_POST['turma'];
+                $nome = trim($_POST['nome']);
+                $email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
+                $turno = trim($_POST['turno']);
+                $turma = trim($_POST['turma']);
                 if(!empty($nome) && !empty($email) && !empty($turno) && !empty($turma)){
                     $stmt = $conn->prepare("INSERT INTO recrutamento (nome, email, turno, turma) VALUES (:nome, :email, :turno, :turma)");
                     $stmt->bindParam(':nome', $nome);

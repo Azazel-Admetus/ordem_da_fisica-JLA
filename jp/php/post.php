@@ -1,9 +1,9 @@
 <?php
 require_once "conn.php";
 session_start();
-if($_SERVER['REQUEST_METHOD'] == 'POST' && $_SESSION['user_tipo'] == 'admin' ){
-    $titulo = $_POST['titulo'];
-    $conteudo = $_POST['conteudo'];
+if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_SESSION['user_id']) && $_SESSION['user_tipo'] == 'admin' ){
+    $titulo = isset($_POST['titulo']) ? htmlspecialchars(trim(($_POST['titulo']))) : null;
+    $conteudo = isset($_POST['conteudo']) ? htmlspecialchars(trim($_POST['conteudo'])) : null;
     $admin_id = $_SESSION['user_id'];
     if(!empty($_FILES['imagem']['tmp_name'])){
         $imagem_dados = file_get_contents($_FILES['imagem']['tmp_name']);

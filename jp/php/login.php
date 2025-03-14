@@ -19,11 +19,11 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
             header('Location:index-pos.php');
             exit;
         }else{
-            header('Location:../html/login.html?error=invalid_credentials');
+            header('Location:../html/login.php?error=invalid_credentials');
             exit;
         }
     }else{
-        header('Location:../html/login.html?empty=true');
+        header('Location:../html/login.php?empty=true');
         exit;
     }
 }

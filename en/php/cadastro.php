@@ -40,11 +40,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
             header("X-Frame-Options: DENY");
             exit;
         }else{
-            header('Location:../html/cadastro.html?db=False');
+            header('Location:../html/cadastro.php?db=False');
             exit;
         }
     } else{
-        header('Location:../html/cadastro.html?empty=True');
+        header('Location:../html/cadastro.php?empty=True');
         exit;
     }
 
