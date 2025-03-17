@@ -11,6 +11,10 @@ if(isset($_GET['error']) &&  $_GET['error'] == 'invalid_cod'){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="物理学に焦点を当てた学習クラブに参加するために登録してください。">
+    <meta name="keywords" content="物理学クラブ, 物理学, 物理の秩序, 登録, 物理の秩序に登録">
+    <meta name="author" content="Azazel Admetus">
+    <link rel="icon" href="../img/logo.jpeg" type="image/jpeg">
     <link rel="stylesheet" href="../css/form.css">
     <title>フォーム</title>
 </head>

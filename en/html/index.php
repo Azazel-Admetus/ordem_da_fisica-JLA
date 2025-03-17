@@ -16,7 +16,11 @@ if(isset($_GET['idioma'])){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Homepage of the website. From here, you can log in, register, sign up, and read posts. Additionally, you can change the language at the footer of the site.">
+<meta name="keywords" content="homepage, index, physics, club, physics club, order of physics, order, jla, joaquim de lima avelino, joaquim de lima, order of physics jla, order of physics - JLA, orderofphysicsjla">
     <link rel="stylesheet" href="../css/index.css">
+    <meta name="author" content="Azazel Admetus">
+    <link rel="icon" href="../img/logo.jpeg" type="image/jpeg">
     <title>Physics Club - JLA</title>
 </head>
 <body>

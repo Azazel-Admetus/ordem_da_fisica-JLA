@@ -7,7 +7,7 @@
     <meta name="keywords" content="physics, club, school club, learn physics, immerse in physics, JLA, Joaquim de Lima, Joaquim de Lima Avelino, education, science, order of physics, studies, study club, learn physics">
     <meta name="author" content="Azazel Admetus">
     <meta name="robots" content="index, follow">
-    <link rel="icon" href="../img/img-logo.jpeg" type="image/jpeg">
+    <link rel="icon" href="../img/logo.jpeg" type="image/jpeg">
     <link rel="stylesheet" href="../css/index-sec.css">
     <script src="https://kit.fontawesome.com/166d077dc6.js" crossorigin="anonymous"></script>
     <title>Physics Club - JLA</title>

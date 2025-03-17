@@ -16,7 +16,11 @@ if(isset($_GET['idioma'])){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página inicial del sitio. Desde aquí podrás iniciar sesión, registrarte, inscribirte y leer las publicaciones. Además, también puedes cambiar de idioma en el pie de página del sitio.">
+    <meta name="keywords" content="inicio, índice, física, club, club de física, orden de la física, orden, jla, joaquim de lima avelino, joaquim de lima, orden de la física jla, orden de la física - JLA, ordendelafisicajla">
     <link rel="stylesheet" href="../css/index.css">
+    <meta name="author" content="Azazel Admetus">
+    <link rel="icon" href="../img/logo.jpeg" type="image/jpeg">
     <title>Club de Física - JLA</title>
 </head>
 <body>

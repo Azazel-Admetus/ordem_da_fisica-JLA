@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Página onde os posts feitos pelos admin estão sendo exibidos">
+    <meta name="description" content="Página onde os posts feitos pelos admin serão exibidos">
     <meta name="keywords" content="física, clube, clube escolar, aprenda física, imerse na física, JLA, Joaquim de Lima, Joaquim de Lima Avelino, ensino, ciência, ordem da física, estudos, clube de estudos, apreder física">
     <meta name="author" content="Azazel Admetus">
-    <meta name="robots" content="index, follow">
-    <link rel="icon" href="../img/img-logo.jpeg" type="image/jpeg">
+    <link rel="icon" href="../img/logo.jpeg" type="image/jpeg">
     <link rel="stylesheet" href="../css/index-sec.css">
     <script src="https://kit.fontawesome.com/166d077dc6.js" crossorigin="anonymous"></script>
     <title>Clube de Física - JLA</title>

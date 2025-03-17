@@ -16,6 +16,10 @@ if(isset($_GET['idioma'])){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="サイトのホーム画面です。ここからログイン、登録、サインアップができ、投稿を読むこともできます。さらに、サイトのフッターで言語を変更することも可能です。">
+<meta name="keywords" content="ホーム, インデックス, 物理学, クラブ, 物理学クラブ, 物理の秩序, 秩序, JLA, ジョアキン・デ・リマ・アヴェリーノ, ジョアキン・デ・リマ, 物理の秩序JLA, 物理の秩序 - JLA, 物理の秩序JLA">
+    <meta name="author" content="Azazel Admetus">
+    <link rel="icon" href="../img/logo.jpeg" type="image/jpeg">
     <link rel="stylesheet" href="../css/index.css">
     <title>物理部 - JLA</title>
 </head>

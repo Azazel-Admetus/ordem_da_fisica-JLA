@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página onde o usuário pode fazer o login para poder acessar o site">
+    <meta name="keywords" content="login, faça login, acessar, acesse">
+    <link rel="icon" href="../img/logo.jpeg" type="image/jpeg">
+    <meta name="author" content="Azazel Admetus">
     <link rel="stylesheet" href="../css/login.css">
     <title>Login</title>
 </head>
