@@ -84,7 +84,7 @@ main #formulario p{
 }
 @media (max-width: 700px){
     html, body{
-        overflow: hidden;
+        overflow: auto;
         max-width: 100%;
     }
     main header{
@@ -114,7 +114,7 @@ main #formulario p{
 }
 @media (max-width: 890px){
     html, body{
-        overflow: hidden;
+        overflow: auto;
         max-width: 100%;
     }
     main header{
