@@ -15,7 +15,7 @@ if(isset($_GET['idioma'])){
     <meta name="author" content="Azazel Admetus">
     <link rel="icon" href="../img/logo.jpeg" type="image/jpeg">
     <link rel="stylesheet" href="../css/index.css">
-    <title>Clube - JLA</title>
+    <title>Clube de Física - JLA</title>
 </head>
 <body>
     <main>
