@@ -3,6 +3,8 @@ $error_msg = '';
 if(isset($_GET['error']) &&  $_GET['error'] == 'invalid_cod'){
     $error_msg = "Código inválido. Verifique se digitou corretamente ou entre em contato com os membros do clube.";
 }
+$codigo = isset($_GET['codigo']) ? $_GET['codigo'] : '';
+$readonly = !empty($codigo) ? 'readonly' : 'required';
 ?>
 
 
@@ -80,7 +82,7 @@ if(isset($_GET['error']) &&  $_GET['error'] == 'invalid_cod'){
                     <!-- codigo de acesso: Uqmx8vpl -->
                             <h4>Digite o código de acesso para poder enviar o formulário</h4>
                             <label for="codigo">Código de acesso:</label>
-                            <input type="text" id="codigo" name="codigo" placeholder="Digite o código de acesso" required>
+                            <input type="text" id="codigo" name="codigo" placeholder="Digite o código de acesso" value="<?php echo htmlspecialchars($codigo);?>" <?php echo $readonly;?>>
                         </section>
                     </section>
                 </section>
