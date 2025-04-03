@@ -31,7 +31,7 @@ $readonly = !empty($codigo) ? 'readonly' : 'required';
         <div>
             <form  action="../php/formulario_php.php" method="POST" >
                 <header>
-                    <h2>Faça já a sua inscrição para poder participar do Clube de Física!</h2>
+                    <h2>Faça já a sua inscrição-zzzz para poder participar do Clube de Física!</h2>
                     <p>Preencha todos os campos corretamente. Após o formulário ser enviado, analisaremos manualmente sua solicitação e daremos uma resposta via email em até 7 dias úteis.</p>
                 </header>
                 <section>
