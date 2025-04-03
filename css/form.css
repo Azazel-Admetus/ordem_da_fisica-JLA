@@ -237,7 +237,7 @@ form footer button:hover{
     main form section #cod{
         margin-top: -15%;
     }
-    main form section #turno-tag #turma_matutino, #turma-vespertino{
+    main form section #turno-tag #turma_matutino{
         padding: 30px 50px;
     }
 }
