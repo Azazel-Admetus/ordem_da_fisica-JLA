@@ -226,6 +226,11 @@ form footer button:hover{
         text-align: center;
         margin-top: -30%;
     }
+    #vespertino{
+        position: relative;
+        z-index: 10;
+        pointer-events: auto;
+    }
     main form section #turno-tag{
         display: inline-block;
         justify-content: center;
