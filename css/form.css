@@ -227,8 +227,7 @@ form footer button:hover{
         margin-top: -30%;
     }
     main form section #turno-tag{
-        display: flex;
-        flex-direction: column;
+        display: inline-block;
         justify-content: center;
         gap: 15px;
         align-items: center;
