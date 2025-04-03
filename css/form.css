@@ -233,6 +233,7 @@ form footer button:hover{
         gap: 15px;
         align-items: center;
         text-align: center;
+        padding: 10px 15px;
     }
     main form section #cod{
         margin-top: -15%;
