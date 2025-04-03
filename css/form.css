@@ -195,7 +195,7 @@ form footer button:hover{
     text-decoration:underline;
 
 }
-@media (max-width: 700px){
+@media (max-width: 900px){
     html, body{
         overflow: auto;
         max-width: 100%;
@@ -233,7 +233,7 @@ form footer button:hover{
         gap: 15px;
         align-items: center;
         text-align: center;
-        padding: 10px 15px;
+        padding: 100px 150px;
     }
     main form section #cod{
         margin-top: -15%;
