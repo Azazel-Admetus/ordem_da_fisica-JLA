@@ -133,7 +133,7 @@ summary{
     font-family: var(--secundaria);
     color: var(--preto);
     font-weight: 600;
-    padding-top: 20px;
+    margin-top: 10px;
 }
 form section h4{
     font-family: var(--secundaria);
