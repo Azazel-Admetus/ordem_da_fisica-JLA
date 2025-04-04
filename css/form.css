@@ -146,6 +146,7 @@ form section #turno-tag #matutino{
 }
 form section #turno-tag #vespertino{
     margin-right: 5px;
+    padding-bottom: 0;
 }
 form #cod{
     display: flex;
