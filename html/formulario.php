@@ -16,7 +16,7 @@ $readonly = !empty($codigo) ? 'readonly' : 'required';
     <meta name="description" content="Faça sua inscrição para poder participar do clube de estudos focado em física.">
     <meta name="keywords" content="clube de física, física, ordem da física, inscrição, inscrever ordem da física ">
     <meta name="author" content="Azazel Admetus">
-    <link rel="icon" href="../img/logo-fundo-branco.jpeg" type="image/png">
+    <link rel="icon" href="../img/logo-fundo-branco.png" type="image/png">
     <link rel="stylesheet" href="../css/form.css">
     <title>FORMULÁRIO</title>
 </head>
