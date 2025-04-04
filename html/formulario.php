@@ -45,8 +45,7 @@ $readonly = !empty($codigo) ? 'readonly' : 'required';
                         <div id='turno-tag'>
                             <h4>Qual seu turno?</h4>
                             <label for="matutino">Matutino</label>
-                            <input type="radio" id="matutino" value="matutino" onclick="turma_matutino_selecao()" name="turno">
-                            <select name="turma" id="turma_matutino">
+                            <select name="turma" id="matutino">
                                 <option value="primeiro_M1">1ºM1</option>
                                 <option value="primeiro_M2">1ºM2</option>
                                 <option value="primeiro_M3">1ºM3</option>
@@ -60,8 +59,7 @@ $readonly = !empty($codigo) ? 'readonly' : 'required';
                                 <option value="terceiro_M4">3ºM4</option>
                             </select>
                             <label for="vespertino">Vespertino</label>
-                            <input type="radio" id="vespertino" name="turno" onclick="turma_vespertino_selecao()" value="vespertino">
-                            <select name="turma" id="turma_vespertino">
+                            <select name="turma" id="vespertino">
                                 <option value="primeiro_T1">1ºT1</option>
                                 <option value="primeiro_T2">1ºT2</option>
                                 <option value="primeiro_T3">1ºT3</option>
@@ -93,13 +91,5 @@ $readonly = !empty($codigo) ? 'readonly' : 'required';
         </div>
         <footer></footer>
     </main>
-    <!-- <script>
-        document.getElementById('matutino').addEventListener('click', function(){
-        document.getElementById('turma_matutino').classList.add('active');
-        });
-        document.getElementById('vespertino').addEventListener('click', function(){
-        document.getElementById('turma_vespertino').classList.add('active');
-        });
-    </script> -->
 </body>
 </html>
