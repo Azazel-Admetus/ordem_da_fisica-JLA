@@ -1,5 +1,11 @@
 #turma_matutino, #turma_vespertino{
-    display: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+}
+#turma_matutino.active, #turma_vespertino.active {
+    opacity: 1;
+    pointer-events: auto;
 }
 :root{
     --vermelho: #ff3131 ;
@@ -226,10 +232,11 @@ form footer button:hover{
         text-align: center;
         margin-top: -30%;
     }
-    #vespertino{
+    select{
         position: relative;
-        z-index: 10;
-        pointer-events: auto;
+        z-index: 1000;
+        min-height: 40px;
+        height: auto;
     }
     main form section #turno-tag{
         display: inline-block;
