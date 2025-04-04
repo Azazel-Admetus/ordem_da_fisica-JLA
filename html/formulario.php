@@ -94,6 +94,6 @@ $readonly = !empty($codigo) ? 'readonly' : 'required';
         </div>
         <footer></footer>
     </main>
-    </script> -->
+    </script>
 </body>
 </html>

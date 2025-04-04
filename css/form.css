@@ -124,7 +124,12 @@ form section #turno-tag{
     align-items: center;
     flex-direction: row;
 }
-form section #turno-tag label, summary{
+form section #turno-tag label{
+    font-family: var(--secundaria);
+    color: var(--preto);
+    font-weight: 600;
+}
+summary{
     font-family: var(--secundaria);
     color: var(--preto);
     font-weight: 600;
