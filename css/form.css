@@ -223,6 +223,9 @@ form footer button:hover{
         flex-direction: column;
         justify-content: center;
     }
+    label{
+        text-decoration: underline;
+    }
     main form section #nome-email{
         display: flex;
         flex-direction: column;
