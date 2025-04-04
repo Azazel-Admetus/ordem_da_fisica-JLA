@@ -11,5 +11,7 @@
 // });
 document.getElementById('matutino').addEventListener('click', function(){
     document.getElementById('turma_matutino').classList.add('active');
+});
+document.getElementById('vespertino').addEventListener('click', function(){
     document.getElementById('turma_vespertino').classList.add('active');
 });
