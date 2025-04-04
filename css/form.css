@@ -83,7 +83,8 @@ form section{
 }
 form section #section-separação{
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    flex-direction: row;
 }
 form section #nome-email{
     display: flex;

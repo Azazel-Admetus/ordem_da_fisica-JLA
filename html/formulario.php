@@ -49,7 +49,7 @@ $readonly = !empty($codigo) ? 'readonly' : 'required';
                             <label for="vespertino">Vespertino</label>
                             <input type="radio" id="vespertino" name="turno" value="vespertino"> 
                         </div>
-                        <details>
+                        <details open>
                             <summary>Escolha sua Turma</summary>
                             <select name="turma" id="turma_matutino">
                                 <option value="primeiro_M1">1ºM1</option>
