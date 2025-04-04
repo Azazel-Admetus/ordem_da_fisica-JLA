@@ -93,6 +93,14 @@ $readonly = !empty($codigo) ? 'readonly' : 'required';
         </div>
         <footer></footer>
     </main>
-    <script src="../js/form.js"></script>
+    <script>
+        document.getElementById('matutino').addEventListener('click', function(){
+        document.getElementById('turma_matutino').classList.add('active');
+        });
+        document.getElementById('vespertino').addEventListener('click', function(){
+        document.getElementById('turma_vespertino').classList.add('active');
+        });
+    </script>
 </body>
 </html>
+        
