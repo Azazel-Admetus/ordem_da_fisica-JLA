@@ -51,7 +51,7 @@ $readonly = !empty($codigo) ? 'readonly' : 'required';
                         </div>
                         <details open>
                             <summary>Escolha sua Turma</summary>
-                            <select name="turma" id="turma_matutino">
+                            <select name="turma" >
                                 <option value="primeiro_M1">1ºM1</option>
                                 <option value="primeiro_M2">1ºM2</option>
                                 <option value="primeiro_M3">1ºM3</option>
