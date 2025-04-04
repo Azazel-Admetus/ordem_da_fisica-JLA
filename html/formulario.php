@@ -44,12 +44,7 @@ $readonly = !empty($codigo) ? 'readonly' : 'required';
                         </div>
                         <div id='turno-tag'>
                             <h4>Qual seu turno?</h4>
-                            <label for="matutino">Matutino</label>
-                            <input type="radio" id="matutino" value="matutino" name="turno">
-                            <label for="vespertino">Vespertino</label>
-                            <input type="radio" id="vespertino" name="turno" value="vespertino"> 
-                        </div>
-                        <details open>
+                            <details open>
                             <summary>Escolha sua Turma</summary>
                             <select name="turma" >
                                 <option value="primeiro_M1">1ºM1</option>
@@ -78,6 +73,11 @@ $readonly = !empty($codigo) ? 'readonly' : 'required';
                             </select>
 
                         </details>
+                            <label for="matutino">Matutino</label>
+                            <input type="radio" id="matutino" value="matutino" name="turno">
+                            <label for="vespertino">Vespertino</label>
+                            <input type="radio" id="vespertino" name="turno" value="vespertino"> 
+                        </div>
                     </section>
                     <section>
                         <section id='cod'>
