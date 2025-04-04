@@ -48,33 +48,36 @@ $readonly = !empty($codigo) ? 'readonly' : 'required';
                             <input type="radio" id="matutino" value="matutino" onclick="turma_matutino_selecao()" name="turno">
                             <label for="vespertino">Vespertino</label>
                             <input type="radio" id="vespertino" name="turno" onclick="turma_vespertino_selecao()" value="vespertino">
-                            <select name="turma" id="turma_matutino">
-                                <option value="primeiro_M1">1ºM1</option>
-                                <option value="primeiro_M2">1ºM2</option>
-                                <option value="primeiro_M3">1ºM3</option>
-                                <option value="segundo_M1">2ºM1</option>
-                                <option value="segundo_M2">2ºM2</option>
-                                <option value="segundo_M3">2ºM3</option>
-                                <option value="segundo_M4">2ºM4</option>
-                                <option value="terceiro_M1">3ºM1</option>
-                                <option value="terceiro_M2">3ºM2</option>
-                                <option value="terceiro_M3">3ºM3</option>
-                                <option value="terceiro_M4">3ºM4</option>
-                            </select>
-                            <select name="turma" id="turma_vespertino">
-                                <option value="primeiro_T1">1ºT1</option>
-                                <option value="primeiro_T2">1ºT2</option>
-                                <option value="primeiro_T3">1ºT3</option>
-                                <option value="primeiro_T4">1ºT4</option>
-                                <option value="segundo_T1">2ºT1</option>
-                                <option value="segundo_T2">2ºT2</option>
-                                <option value="segundo_T3">2ºT3</option>
-                                <option value="segundo_T4">2ºT4</option>
-                                <option value="terceiro_T1">3ºT1</option>
-                                <option value="terceiro_T2">3ºT2</option>
-                                <option value="terceiro_T3">3ºT3</option>
-                                <option value="terceiro_T4">3ºT4</option>
-                            </select>
+                            <details open>
+                                <summary>Selecione sua turma</summary>
+                                <select name="turma" id="turma_matutino">
+                                    <option value="primeiro_M1">1ºM1</option>
+                                    <option value="primeiro_M2">1ºM2</option>
+                                    <option value="primeiro_M3">1ºM3</option>
+                                    <option value="segundo_M1">2ºM1</option>
+                                    <option value="segundo_M2">2ºM2</option>
+                                    <option value="segundo_M3">2ºM3</option>
+                                    <option value="segundo_M4">2ºM4</option>
+                                    <option value="terceiro_M1">3ºM1</option>
+                                    <option value="terceiro_M2">3ºM2</option>
+                                    <option value="terceiro_M3">3ºM3</option>
+                                    <option value="terceiro_M4">3ºM4</option>
+                                </select>
+                                <select name="turma" id="turma_vespertino">
+                                    <option value="primeiro_T1">1ºT1</option>
+                                    <option value="primeiro_T2">1ºT2</option>
+                                    <option value="primeiro_T3">1ºT3</option>
+                                    <option value="primeiro_T4">1ºT4</option>
+                                    <option value="segundo_T1">2ºT1</option>
+                                    <option value="segundo_T2">2ºT2</option>
+                                    <option value="segundo_T3">2ºT3</option>
+                                    <option value="segundo_T4">2ºT4</option>
+                                    <option value="terceiro_T1">3ºT1</option>
+                                    <option value="terceiro_T2">3ºT2</option>
+                                    <option value="terceiro_T3">3ºT3</option>
+                                    <option value="terceiro_T4">3ºT4</option>
+                                </select>
+                            </details>
                         </div>
                     </section>
                     <section>
