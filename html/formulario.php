@@ -42,13 +42,31 @@ $readonly = !empty($codigo) ? 'readonly' : 'required';
                             <label for="email">Email:</label>
                             <input type="email" id="email" name="email" placeholder="Digite seu email" required>
                         </div>
+                        <h4>Qual seu turno?</h4>
                         <div id='turno-tag'>
-                            <h4>Qual seu turno?</h4>
                             <label for="matutino">Matutino</label>
                             <input type="radio" id="matutino" value="matutino" onclick="turma_matutino_selecao()" name="turno">
                             <label for="vespertino">Vespertino</label>
                             <input type="radio" id="vespertino" name="turno" onclick="turma_vespertino_selecao()" value="vespertino">
-                            <select name="turma" id="turma_matutino">
+                            
+                        </div>
+                    </section>
+                    <section>
+                        <section id='cod'>
+                    <!-- codigo de acesso: Uqmx8vpl -->
+                            <h4>Digite o código de acesso para poder enviar o formulário</h4>
+                            <label for="codigo">Código de acesso:</label>
+                            <input type="text" id="codigo" name="codigo" placeholder="Digite o código de acesso" value="<?php echo htmlspecialchars($codigo);?>" <?php echo $readonly;?>>
+                        </section>
+                    </section>
+                </section>
+                <footer>
+                    <button type="submit">Enviar</button>
+                </footer>
+            </form>
+        </div>
+        <footer></footer>
+        <!-- <select name="turma" id="turma_matutino">
                                 <option value="primeiro_M1">1ºM1</option>
                                 <option value="primeiro_M2">1ºM2</option>
                                 <option value="primeiro_M3">1ºM3</option>
@@ -74,24 +92,7 @@ $readonly = !empty($codigo) ? 'readonly' : 'required';
                                 <option value="terceiro_T2">3ºT2</option>
                                 <option value="terceiro_T3">3ºT3</option>
                                 <option value="terceiro_T4">3ºT4</option>
-                            </select>
-                        </div>
-                    </section>
-                    <section>
-                        <section id='cod'>
-                    <!-- codigo de acesso: Uqmx8vpl -->
-                            <h4>Digite o código de acesso para poder enviar o formulário</h4>
-                            <label for="codigo">Código de acesso:</label>
-                            <input type="text" id="codigo" name="codigo" placeholder="Digite o código de acesso" value="<?php echo htmlspecialchars($codigo);?>" <?php echo $readonly;?>>
-                        </section>
-                    </section>
-                </section>
-                <footer>
-                    <button type="submit">Enviar</button>
-                </footer>
-            </form>
-        </div>
-        <footer></footer>
+                            </select> -->
     </main>
     <script src="../js/form.js"></script>
 </body>

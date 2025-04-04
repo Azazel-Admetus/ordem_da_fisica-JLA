@@ -136,7 +136,7 @@ form section #turno-tag label{
     color: var(--preto);
     font-weight: 600;
 }
-form section #turno-tag h4{
+form section h4{
     font-family: var(--secundaria);
     font-weight: 700;
     margin-right: 20px;
@@ -243,7 +243,7 @@ form footer button:hover{
         background-color: red;
     }
     main form section #turno-tag{
-        display: inline-block;
+        display: row;
         justify-content: center;
         gap: 15px;
         align-items: center;
