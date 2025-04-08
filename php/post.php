@@ -21,7 +21,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_SESSION['user_id']) && $_SESS
         $titulo_dado = null;
     }
     if(!empty($conteudo)){
-        $stmt = $conn->prepare("INSERT INTO POST (titulo, conteudo, imagem, tipo_mime, admin_id) VALUES(:titulo, :conteudo, :imagem, :tipo_mime, :admin_id)");
+        $stmt = $conn->prepare("INSERT INTO post (titulo, conteudo, imagem, tipo_mime, admin_id) VALUES(:titulo, :conteudo, :imagem, :tipo_mime, :admin_id)");
         $stmt->bindValue(':titulo', $titulo_dado);
         $stmt->bindValue(':conteudo', $conteudo);
         $stmt->bindValue(':imagem', $imagem_dados);
