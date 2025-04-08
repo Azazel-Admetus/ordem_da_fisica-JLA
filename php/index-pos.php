@@ -29,14 +29,15 @@
     </header>
     <section>
         <?php
+         $user_tipo = $_SESSION['user_tipo'];
+         if($user_tipo == 'admin'){
+             echo "
+                 <footer style=color:black;>
+                     <a id='link' href='../html/feed_create.php'>Crie uma publicação</a>
+                 </footer>";
+         }
             require_once "index-feed.php";
-            $user_tipo = $_SESSION['user_tipo'];
-            if($user_tipo == 'admin'){
-                echo "
-                    <footer style=color:black;>
-                        <a id='link' href='../html/feed_create.php'>Crie uma publicação</a>
-                    </footer>";
-            }
+           
         ?>
     </section>
 </body>
