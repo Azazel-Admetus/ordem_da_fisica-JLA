@@ -38,11 +38,6 @@ if(isset($_GET['idioma'])){
                 </ul>
             </nav>
         </header>
-        <section id='formulario'>
-            <h2>¿Estás interesado en unirte al club de física? ¡Haz tu inscripción a través del siguiente enlace!</h2>
-            <a href="formulario.php?">Inscríbete</a>
-            <p>Es importante señalar que las inscripciones solo son válidas si eres estudiante de la escuela Joaquim de Lima Avelino en la ciudad de Ouro Preto do Oeste, Rondônia</p>
-        </section>
         <section>
             <?php
                 require_once "../php/index-feed.php";
