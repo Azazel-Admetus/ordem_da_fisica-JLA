@@ -8,6 +8,6 @@ if(ini_get("session.use_cookies")){
         $params["path"], $params["domain"],
         $params["secure"], $params["httponly"]);
 }
-header("Location:../html/index.html");
+header("Location:../html/index.php");
 exit;
 ?>
