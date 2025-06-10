@@ -14,7 +14,7 @@ if(isset($_GET['idioma'])){
     <meta name="keywords" content="inicial, index, física, clube, clube de física, ordem da física, ordem, jla, joaquim de lima avelino, joaquim de lima, ordem da fisica jla, ordem da fisica - JLA, ordemdafisicajla">
     <meta name="author" content="Azazel Admetus">
     <link rel="icon" href="../img/logo.jpeg" type="image/jpeg">
-    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/index.css?v=1.0">
     <title>Clube de Física - JLA</title>
 </head>
 <body>
