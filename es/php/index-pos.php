@@ -21,7 +21,7 @@
                     <a id='incricao' href="../html/formulario.php">Inscríbete</a>
                 </li>
                 <li>
-                    <a href="../html/index.php">
+                    <a href="logout.php">
                         <i class="fa-solid fa-right-from-bracket"></i>
                     </a>
                 </li>
