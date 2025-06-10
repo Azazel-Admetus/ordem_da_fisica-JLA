@@ -38,11 +38,6 @@ if(isset($_GET['idioma'])){
                 </ul>
             </nav>
         </header>
-        <section id='formulario'>
-            <h2>物理部に参加したいですか？下のリンクから登録してください</h2>
-            <a href="formulario.php?">登録する</a>
-            <p>登録は、Rondônia州Ouro Preto do Oeste市のJoaquim de Lima Avelinoo学校の生徒に限られていますので、ご了承ください。</p>
-        </section>
         <section>
             <?php
                 require_once "../php/index-feed.php";
