@@ -31,27 +31,10 @@
             <p>Vale ressaltar que as incrições somente são válidas se você for um aluno da escola Joaquim de Lima Avelino da cidade de Ouro Preto do Oeste, Rondônia</p>
         </section> -->
         <footer>
-            <form method="GET">
-                <label>Mude o idioma</label>
-                <select name="idioma" id="mudar-idioma" onchange="this.form.submit()">
-                    <option value="">Escolha um idioma</option>
-                    <option value="en">Inglês</option>
-                    <option value="es">Espanhol</option>
-                    <option value="jp">Japonês</option>
-                </select>
-            </form>
             <section>
                 <img id='jla' src="../img/LOGO MENOR JLA PNG.png">
             </section>
         </footer>
-    </main>
-    <script>
-        document.getElementById('mudar-idioma').addEventListener('change', function() {
-            if (this.value) {
-                this.form.submit();
-            }
-        });
-    </script>
     </main>
 </body>
 </html>
