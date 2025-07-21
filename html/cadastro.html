@@ -31,5 +31,17 @@
             </footer>
         </form>
     </main>
+    <script>
+        //cria as variáveis para pegar os parâmetros para tratamento de erro
+        const urlParams = new URLSearchParams(window.location.search);
+        const erro = urlParams.get('error');
+        if(erro == 'sizeSlow'){
+            alert('A senha deve ter no mínimo 8 caracteres.');
+        }else if(erro == "erro_cadastro"){
+            alert("Erro ao tentar se cadastrar. Tente novamente mais tarde.");
+        }else if(erro == "campos_vazios"){
+            alert("Preencha todos os campos.");
+        }
+    </script>
 </body>
 </html>

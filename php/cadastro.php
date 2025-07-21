@@ -1,51 +1,48 @@
-<?php
-require_once "conn.php";
-
-if ($_SERVER['REQUEST_METHOD'] === 'POST'){
-    //validando e sintetizando dados 
-    $email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
-    $username =trim($_POST['username']);
-    $senha_antes =$_POST['senha'];
-    if(!$email || empty($username) || empty($senha_antes)){
-        header("Location:../html/cadastro.php?error=invalid_input");
+<?php 
+require_once 'conn.php';
+session_start();
+if($_SERVER['REQUEST_METHOD'] == 'POST') {
+    //pegando os valores do formulário e sanitizando
+    $nome = trim(mb_substr(strip_tags($_POST['nome']), 0, 100)); 
+    $email = filter_var(trim(mb_substr(strip_tags($_POST['email']), 0, 100)), FILTER_VALIDATE_EMAIL);
+    //verifico se a senha tem mais de 8 caracteres
+    if(strlen($_POST['senha']) < 8){
+        header('Location:../html/cadastro.html?error=sizeSlow');
         exit;
     }
-    if(strlen($senha_antes) < 8){
-        header('Location:../html/cadastro.php?error=senha_curta');
-        exit;
-    }
-    $username = htmlspecialchars($username, ENT_QUOTES, 'UTF-8');
-    $email = htmlspecialchars($email, ENT_QUOTES, 'UTF-8');
-    $senha = password_hash($senha_antes, PASSWORD_DEFAULT);
-    $tipo = 'padrao';
-    //verificando duplicidade 
-    $check_stmt = $conn->prepare('SELECT COUNT(*) FROM usuarios WHERE email = :email OR nome = :nome');
-    $check_stmt->bindParam(':email', $email);
-    $check_stmt->bindParam(':nome', $username);
-    $check_stmt->execute();
-    $contagem = $check_stmt->fetchColumn();
-    if($contagem > 0){
-        header("Location:../html/cadastro.php?error=duplicate");
-        exit;
-    }
-    //verifica se está vazio e insere no db
-    if(!empty($email) && !empty($username) && !empty($senha)){
-        $stmt = $conn->prepare('INSERT INTO usuarios (nome, email, senha, tipo)  VALUES (:nome, :email, :senha, :tipo)');
-        $stmt->bindParam(':nome', $username);
+    //verifica se estão vazios e se o email é válido, e sim, eu fiz a verificação do email novamente
+    if(!empty($nome) && !empty($email) && !empty($senha) && filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $senha = password_hash($_POST['senha'], PASSWORD_DEFAULT);
+        $stmt = $conn->prepare('SELECT COUNT(*) FROM usuarios WHERE nome = :nome OR email = :email'); //verifica se o usuário já existe
+        $stmt->bindParam(':nome', $nome);
         $stmt->bindParam(':email', $email);
-        $stmt->bindParam(':senha', $senha);
-        $stmt->bindParam(':tipo', $tipo);
-        if ($stmt->execute()){
-            header('Location:index-pos.php');
-            header("X-Frame-Options: DENY");
-            exit;
-        }else{
-            header('Location:../html/cadastro.php?db=False');
-            exit;
+        $stmt->execute();
+        $exists = $stmt->fetchColumn();
+        if ($exists > 0){
+            header("Location:../html/login.html?error=user_exists");
+            exit();
+        } else {
+            //cadastra o novo usuário
+            $stmt = $conn->prepare("INSERT INTO usuarios (nome, email, senha) VALUES (:nome, :email, :senha)");
+            $stmt->bindParam(':nome', $nome);
+            $stmt->bindParam(':email', $email);
+            $stmt->bindParam(':senha', $senha);
+            if ($stmt->execute()){
+                //armazena valores na sessão
+                $_SESSION['username'] = $nome;
+                $_SESSION['email'] = $email;
+                $mensagem = urlencode("Aguarde, estamos te redirecionando...");
+                $redirect = urlencode("../html/home.php?processo=sucesso");
+                header("Location:../html/loading.html?msg=$mensagem&redirect=$redirect");
+                exit();
+            } else{
+                header('Location:../html/cadastro.html?error=erro_cadastro');
+                exit();
+            }
         }
     } else{
-        header('Location:../html/cadastro.php?empty=True');
-        exit;
+        header('Location:../html/cadastro.html?error=campos_vazios');
+        exit();
     }
-
 }
+?>
