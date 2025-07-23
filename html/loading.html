@@ -15,7 +15,8 @@
   <title>Carregando...</title>
 </head>
 <body>
-  <div class="loader" aria-label="Ícone de carregamento"></div>
+  <!-- <div class="loader" aria-label="Ícone de carregamento"></div> -->
+  <img class="apple" src="../img/logo-branca-transparente-background.png" alt="Logo maçã caindo" aria-label="Logo da Ordem da Física caindo">
   <p id="msg">Carregando...</p>
   <script>
     const urlParams = new URLSearchParams(window.location.search);
@@ -24,7 +25,7 @@
     document.getElementById('msg').textContent = msg; //pega a tag html para inserir o valor da variável com a mensagem
     setTimeout(() => {
       window.location.href = redirect; //redireciona
-    }, 1500); // tempo de carregamento de 1,5s
+    }, 2500); // tempo de carregamento de 1,5s
   </script>
 </body>
 </html>

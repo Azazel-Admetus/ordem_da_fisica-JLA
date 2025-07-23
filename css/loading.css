@@ -12,7 +12,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-body {
+/* body {
   background-color:var(--color_preto);
   color: white;
   text-align: center;
@@ -31,4 +31,35 @@ body {
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+} */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  color: #fff;
+  font-family: sans-serif;
+}
+
+.apple {
+    width: 200px;
+    animation: fall 2s ease-in-out;
+}
+
+@keyframes fall {
+  0%   { transform: translateY(-200px); opacity: 0; }
+  60%  { transform: translateY(0); opacity: 1; }
+  75%  { transform: translateY(-20px); }
+  100% { transform: translateY(0); }
+}
+
+#msg {
+  margin-top: 20px;
+  font-size: 1.2em;
+  text-align: center;
 }
