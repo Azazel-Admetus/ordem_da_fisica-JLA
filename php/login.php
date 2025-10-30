@@ -19,7 +19,10 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
             $_SESSION['username'] = $user['nome'];
             $_SESSION['user_tipo'] = $user['tipo'];
             $_SESSION['user_email'] = $user['email'];
-            header('Location:../html/loading.php?msg="Acessando..."&redirect="..html/home.php"');
+
+            $mensagem = urlencode("Acessando...");
+            $redirect = urlencode("../html/home.php?processo=sucesso");
+            header('Location:../html/loading.php?msg=$mensagem&redirect=$redirect');
             exit;
         }else{
             header('Location:../html/login.php?error=invalid_credentials');

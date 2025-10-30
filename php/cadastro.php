@@ -7,7 +7,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = filter_var(trim(mb_substr(strip_tags($_POST['email']), 0, 100)), FILTER_VALIDATE_EMAIL);
     //verifico se a senha tem mais de 8 caracteres
     if(strlen($_POST['senha']) < 8){
-        header('Location:../html/cadastro.html?error=sizeSlow');
+        header('Location:../html/cadastro_usuarios.html?error=sizeSlow');
         exit;
     }
     //verifica se estão vazios e se o email é válido, e sim, eu fiz a verificação do email novamente
@@ -36,12 +36,12 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
                 header("Location:../html/loading.html?msg=$mensagem&redirect=$redirect");
                 exit();
             } else{
-                header('Location:../html/cadastro.html?error=erro_cadastro');
+                header('Location:../html/cadastro_usuarios.html?error=erro_cadastro');
                 exit();
             }
         }
     } else{
-        header('Location:../html/cadastro.html?error=campos_vazios');
+        header('Location:../html/cadastro_usuarios.html?error=campos_vazios');
         exit();
     }
 }
