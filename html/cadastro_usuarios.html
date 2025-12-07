@@ -44,5 +44,16 @@
             <img id='jla' src="../img/LOGO MENOR JLA PNG.png">
         </section>
     </footer>
+    <script>
+        //variável para tratamento de erro
+        const urlParams = new URLSearchParams(window.location.search);
+        const error = urlParams.get('error');   
+        //faz a verificação do valor da variável para tratamento de erro
+        if(error === "erro_cadastro"){
+            alert("Erro ao tentar fazer o cadastro. Tente novamente mais tarde.")
+        }else if(error === "campos_vazios"){
+            alert('Por favor se certifique de preencher todos os campos.')
+        }
+    </script>
 </body>
 </html>
