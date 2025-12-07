@@ -47,6 +47,16 @@
         <section>
             <img id='jla' src="../img/LOGO MENOR JLA PNG.png">
         </section>
-    </footer> 
+    </footer>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const error = urlParams.get('error');
+
+        if(error == "invalid_credentials"){
+            alert("Email ou senha inválidos. Tente novamente.");
+        } else if (error == "empty_fields"){
+            alert("Por favor se certifique de preencher todos os campos.");
+        }
+    </script> 
 </body>
 </html>

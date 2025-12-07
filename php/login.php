@@ -29,7 +29,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
             exit;
         }
     }else{
-        header('Location:../html/login.php?empty=true');
+        header('Location:../html/login.php?error=empty_fields');
         exit;
     }
 }
