@@ -12,20 +12,51 @@ export default function IngressoSection() {
     email: '',
     telefone: '',
     formacao: '',
-    mensagem: ''
+    mensagem: '',
+    website: ''
   });
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
+    if (name === 'telefone') {
+      const digits = value.replace(/\D/g, '').slice(0, 11);
+      let formatted = '';
+      if (digits.length > 0) formatted = `(${digits.slice(0, 2)}`;
+      if (digits.length >= 3) formatted += `) ${digits.slice(2, 7)}`;
+      if (digits.length >= 8) formatted += `-${digits.slice(7, 11)}`;
+      setFormData(prev => ({ ...prev, [name]: formatted }));
+      return;
+    }
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Backend logic will be implemented by the user
-    console.log('Form data:', formData);
-    setSubmitted(true);
+    setIsSubmitting(true);
+    setErrorMessage('');
+
+    try {
+      const response = await fetch('/php/ingresso.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json().catch(() => null);
+      if (!response.ok || !data?.ok) {
+        throw new Error(data?.error || 'Nao foi possivel enviar sua inscricao.');
+      }
+
+      await new Promise((resolve) => setTimeout(resolve, 3000));
+      setSubmitted(true);
+    } catch (error) {
+      setErrorMessage(error.message || 'Erro inesperado ao enviar.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -107,6 +138,7 @@ export default function IngressoSection() {
                     name="nome"
                     type="text"
                     required
+                    maxLength={120}
                     value={formData.nome}
                     onChange={handleChange}
                     className="border-gray-200 focus:border-[#ff3131]/50 focus:ring-2 focus:ring-[#ff3131]/10 
@@ -126,6 +158,7 @@ export default function IngressoSection() {
                       name="email"
                       type="email"
                       required
+                      maxLength={150}
                       value={formData.email}
                       onChange={handleChange}
                       className="border-gray-200 focus:border-[#ff3131]/50 focus:ring-2 focus:ring-[#ff3131]/10 
@@ -144,6 +177,7 @@ export default function IngressoSection() {
                       name="telefone"
                       type="tel"
                       required
+                      maxLength={30}
                       value={formData.telefone}
                       onChange={handleChange}
                       className="border-gray-200 focus:border-[#ff3131]/50 focus:ring-2 focus:ring-[#ff3131]/10 
@@ -161,6 +195,7 @@ export default function IngressoSection() {
                     id="formacao"
                     name="formacao"
                     type="text"
+                    maxLength={150}
                     value={formData.formacao}
                     onChange={handleChange}
                     className="border-gray-200 focus:border-[#ff3131]/50 focus:ring-2 focus:ring-[#ff3131]/10 
@@ -176,6 +211,7 @@ export default function IngressoSection() {
                   <Textarea
                     id="mensagem"
                     name="mensagem"
+                    maxLength={1000}
                     value={formData.mensagem}
                     onChange={handleChange}
                     className="border-gray-200 focus:border-[#ff3131]/50 focus:ring-2 focus:ring-[#ff3131]/10 
@@ -184,15 +220,39 @@ export default function IngressoSection() {
                   />
                 </div>
 
+                {/* Honeypot (anti-bot) */}
+                <div className="hidden" aria-hidden="true">
+                  <label htmlFor="website">Website</label>
+                  <input
+                    id="website"
+                    name="website"
+                    type="text"
+                    autoComplete="off"
+                    tabIndex={-1}
+                    value={formData.website}
+                    onChange={handleChange}
+                  />
+                </div>
+
+                {errorMessage && (
+                  <div className="p-4 rounded-lg bg-red-50 border border-red-200">
+                    <p className="text-sm text-red-700 text-center font-normal leading-relaxed">
+                      {errorMessage}
+                    </p>
+                  </div>
+                )}
+
                 <div className="pt-6">
                   <Button 
                     type="submit"
+                    disabled={isSubmitting}
                     className="relative w-full bg-gradient-to-r from-[#212121] to-[#2a2a2a] hover:from-[#2a2a2a] 
                              hover:to-[#212121] text-white h-14 text-sm tracking-[0.2em] uppercase font-light 
-                             transition-all duration-500 rounded-lg overflow-hidden group"
+                             transition-all duration-500 rounded-lg overflow-hidden group
+                             disabled:opacity-70 disabled:cursor-not-allowed"
                   >
                     <span className="relative z-10 flex items-center justify-center gap-3">
-                      Enviar Inscrição
+                      {isSubmitting ? 'Enviando...' : 'Enviar Inscrição'}
                       <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                     </span>
                     <div className="absolute inset-0 bg-gradient-to-r from-[#ff3131]/0 via-[#ff3131]/10 to-[#ff3131]/0 
